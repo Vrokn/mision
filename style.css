@@ -1,0 +1,20 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 16px;
+    background-color: rgb(17, 17, 17);
+    color: rgb(216, 216, 216);
+  }
+  .bs-example{
+    margin: 20px;
+    }
+  .wrapper {
+    width: 600px;
+    margin: 20px auto 0;
+    text-align: center;
+    }
+  button {
+    font-size: 16px;
+    padding: 15px;
+  }
+  table { width: 100%; }
+  table th, table td { padding: 7px 5px; border-bottom: 1px solid #ccc; }
