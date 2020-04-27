@@ -10,13 +10,7 @@
         var password = $('#password').val();
         console.log(name);
         console.log(email);
-        console.log(password);
-        var tr = ('<tr>' +
-                    '<td>'+ name +'</td>'+
-                    '<td>'+ email +'</td>'+
-            '</tr>'
-                );
-      $('table').append(tr);        
+        console.log(password);             
         $.ajax({
           method: "POST",
           url: "http://localhost:3000/register",

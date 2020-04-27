@@ -19,7 +19,6 @@ app.use(function(req, res, next) {
   next();
 });
 
-
 app.post("/register", async (req, res) => { //POST /register - crea al usuario en MongoDB.
   const name = req.body.name;
   const email = req.body.email;
@@ -30,10 +29,9 @@ app.post("/register", async (req, res) => { //POST /register - crea al usuario e
   res.send(200);
 });
 
-app.get("/", (req, res) => { //GET / - muestra la lista de usuarios registrados.
-  const user = Users.find({}, function (err, docs) {
-    return res.send(JSON.stringify(docs));
-  });
+app.get("/", async (req, res) => { //GET / - muestra la lista de usuarios registrados.
+  const user = await Users.find();
+     res.send(JSON.stringify(user));
 });
  
 app.listen(3000, () => console.log("Listening on port 3000 ..."));
